@@ -1,448 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mona Agrawal — AI engineer &amp; full-stack developer</title>
+  <meta name="description" content="Mona Agrawal builds RAG assistants, speech translation pipelines and the backends behind them. B.Tech Computer Science at SRMIST, Chennai.">
+  <link rel="canonical" href="https://monaaportfolio.netlify.app/">
+  <meta name="theme-color" content="#121110">
+  <meta name="color-scheme" content="dark">
 
-<title>Mona Agrawal | Portfolio</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mona Agrawal">
+  <meta property="og:title" content="Mona Agrawal — AI engineer &amp; full-stack developer">
+  <meta property="og:description" content="RAG assistants, speech translation pipelines and the backends behind them.">
+  <meta property="og:url" content="https://monaaportfolio.netlify.app/">
+  <meta property="og:image" content="https://monaaportfolio.netlify.app/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mona Agrawal — AI engineer and full-stack developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mona Agrawal — AI engineer &amp; full-stack developer">
+  <meta name="twitter:description" content="RAG assistants, speech translation pipelines and the backends behind them.">
+  <meta name="twitter:image" content="https://monaaportfolio.netlify.app/assets/img/og.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="images/logo.png">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");setTimeout(function(){var r=document.documentElement;r.classList.add("is-ready");if(!window.monaMain)r.classList.remove("js")},2500);</script>
+  <script src="vendor/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 
-<script src="https://kit.fontawesome.com/b4a128d016.js" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mona Agrawal",
+    "url": "https://monaaportfolio.netlify.app/",
+    "image": "https://monaaportfolio.netlify.app/assets/img/mona-portrait.webp",
+    "email": "mailto:mona.mk.agrawal@gmail.com",
+    "description": "Computer Science student building AI applications and full-stack web systems.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "SRM Institute of Science and Technology" },
+    "knowsAbout": ["Retrieval-augmented generation", "LangChain", "FastAPI", "Whisper", "Python", "C++", "React", "Node.js"],
+    "sameAs": [
+      "https://github.com/Mona-Agrawall",
+      "https://www.linkedin.com/in/mona-agrawal-/",
+      "https://x.com/Mona_Agrawall",
+      "https://www.instagram.com/mona_agrawall/"
+    ]
+  }
+  </script>
 </head>
-
-
 <body>
-
-<!-- HEADER -->
-
-<div id="header">
-
-<div class="container">
-
-<nav>
-
-<img src="images/logo.png" class="logo" alt="logo">
-
-<ul id="sidemenu">
-
-<li><a href="#header">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Certificates</a></li>
-<li><a href="#portfolio">Projects</a></li>
-<li><a href="#contact">Contacts</a></li>
-
-<i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-
-</ul>
-
-<i class="fa-solid fa-bars" onclick="openmenu()"></i>
-
-</nav>
-
-
-<div class="header-text animate-on-load">
-
-<div class="typing-container-wrapper">
-    <p class="typing-container"><span id="typing-text"></span><span class="cursor">|</span></p>
-</div>
-
-<h1 class="hero-title">
-Hi, I am <span class="gradient-text">Mona</span><br>
-Agrawal From India
-</h1>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- ABOUT SECTION -->
-
-<div id="about" class="section-animate">
-
-<div class="container">
-
-<div class="row">
-
-<div class="about-col-1">
-
-<img src="images/mona1.jpg" loading="lazy" alt="Mona">
-
-</div>
-
-
-<div class="about-col-2">
-
-<h1 class="sub-title">About Me</h1>
-
-<p>
-I am a third-year Computer Science student at SRM Institute of Science and Technology specializing in Artificial Intelligence and Machine Learning. My work focuses on building applied AI systems such as retrieval-augmented generation (RAG) pipelines, speech-to-text translation systems, and intelligent adaptive learning engines.
-<br><br>
-I develop end-to-end AI applications using Python, LangChain, FAISS, HuggingFace models, and LLM frameworks, supported by backend technologies including FastAPI and Django. My projects involve designing ML pipelines, embedding-based search systems, and scalable APIs for AI-driven applications.
-<br><br>
-Outside of academics, you'll often find me immersed in doodling or singing.
-</p>
-
-
-
-<div class="tab-titles">
-
-<p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
-<p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
-<p class="tab-links" onclick="opentab(event,'education')">Education</p>
-
-</div>
-
-
-
-<!-- SKILLS -->
-
-<div class="tab-contents active-tab" id="skills">
-
-<ul class="custom-list">
-
-<li>
-<span>Programming Languages</span>
-<ul>
-<li>Python</li>
-<li>C++</li>
-<li>C</li>
-<li>Java</li>
-<li>JavaScript</li>
-</ul>
-</li>
-
-<li>
-<span>AI / ML & Data</span>
-<ul>
-<li>LangChain</li>
-<li>FAISS</li>
-<li>HuggingFace</li>
-<li>Whisper</li>
-<li>Ollama</li>
-<li>Streamlit</li>
-</ul>
-</li>
-
-<li>
-<span>Web & Backend</span>
-<ul>
-<li>React</li>
-<li>Node.js</li>
-<li>Express.js</li>
-<li>FastAPI</li>
-<li>Django</li>
-<li>HTML</li>
-<li>CSS</li>
-</ul>
-</li>
-
-<li>
-<span>Databases</span>
-<ul>
-<li>MySQL</li>
-<li>PostgreSQL</li>
-<li>MongoDB Atlas</li>
-</ul>
-</li>
-
-<li>
-<span>Developer Tools</span>
-<ul>
-<li>Git</li>
-<li>GitHub</li>
-<li>GitLab</li>
-<li>Visual Studio Code</li>
-<li>IntelliJ IDEA</li>
-<li>Jupyter Notebook</li>
-</ul>
-</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- EXPERIENCE -->
-
-<div class="tab-contents" id="experience">
-
-<ul>
-
-<li><span>2024 - Current</span><br>Blockchain Club - <i>Creatives Member</i></li>
-
-<li><span>2024 - Current</span><br>Coding Ninja Club - <i>Corporate Member</i></li>
-
-<li><span>2024 - Current</span><br>dBug Labs Club - <i>Event Member</i></li>
-
-<li><span>2024 - Current</span><br>Movies and Dramatic Club - <i>Actor</i></li>
-
-<li><span>2023 - 2024</span><br>AARUUSH - <i>Creatives Member</i></li>
-
-</ul>
-
-</div>
-
-
-
-<!-- EDUCATION -->
-
-<div class="tab-contents" id="education">
-
-<ul>
-
-<li>
-<span>2023 - 2027</span><br>
-Bachelor of Technology in Computer Science
-<i>(SRM Institute of Science and Technology, Chennai)</i>
-</li>
-
-<li>
-<span>2021 - 2022</span><br>
-Senior Secondary Education
-<i>(St. Xavier's Senior Secondary School)</i>
-</li>
-
-<li>
-<span>2019 - 2020</span><br>
-High School Education
-<i>(St. Xavier's Senior Secondary School)</i>
-</li>
-
-</ul>
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-
-
-
-<!-- ACHIEVEMENTS -->
-
-<div id="services" class="section-animate">
-
-<div class="container">
-
-<h1 class="sub-title">Achievements</h1>
-
-<div class="services-list">
-
-<div>
-
-<i class="fa-solid fa-code"></i>
-
-<a href="images/Adobe.pdf">
-<h2>Adobe India Hackathon</h2>
-</a>
-
-</div>
-
-
-<div>
-
-<i class="fa-solid fa-crop"></i>
-
-<a href="images/Agnirva.pdf">
-<h2>Agnirva AI Internship Program - Fast Track</h2>
-</a>
-
-</div>
-
-
-<div>
-
-<i class="fa-brands fa-app-store"></i>
-
-<p>&nbsp;</p>
-
-<a href="images/SIH.jpg">
-<h2>Smart India Hackathon</h2>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- PROJECTS -->
-
-<div id="portfolio" class="section-animate">
-
-<div class="container">
-
-<h1 class="sub-title">Projects</h1>
-
-<div class="work-list">
-
-
-<div class="work">
-
-<img src="images/work-1.png" loading="lazy" alt="Multilingual Video Translation System">
-
-<div class="layer">
-
-<h3>Multilingual Video Translation System</h3>
-
-<p>
-Built an end-to-end AI pipeline that converts spoken content in videos into translated audio in another language.
-The system integrates speech-to-text using Whisper, translation, and text-to-speech synthesis while maintaining
-audio-video synchronization using FFmpeg.
-</p>
-
-<a href="https://github.com/Mona-Agrawall/multilingual-video-translation-system">
-<i class="fa-solid fa-link"></i>
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="work">
-
-<img src="images/work-2.png" loading="lazy" alt="Chemical Safety RAG Assistant">
-
-<div class="layer">
-
-<h3>Chemical Safety RAG Assistant</h3>
-
-<p>
-Developed an offline Retrieval-Augmented Generation system that answers natural language
-queries over Chemical Safety Data Sheets. Implemented vector search using FAISS and MiniLM
-embeddings with LangChain and local LLMs via Ollama.
-</p>
-
-<a href="https://github.com/Mona-Agrawall/chemical-safety-rag-assistant">
-<i class="fa-solid fa-link"></i>
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="work">
-
-<img src="images/work-3.png" loading="lazy" alt="Adaptive Diagnostic Engine">
-
-<div class="layer">
-
-<h3>Adaptive Diagnostic Engine</h3>
-
-<p>
-Designed an adaptive testing backend that dynamically selects questions using an
-ability-estimation algorithm inspired by Item Response Theory. Built REST APIs using
-FastAPI and MongoDB to manage test sessions and generate personalized study plans with LLMs.
-</p>
-
-<a href="https://github.com/Mona-Agrawall/adaptive-diagnostic-engine">
-<i class="fa-solid fa-link"></i>
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-<a href="https://github.com/Mona-Agrawall" class="btn">See More</a>
-
-</div>
-
-</div>
-
-
-
-<!-- CONTACT -->
-
-<div id="contact">
-
-<div class="container">
-
-<div class="row">
-
-<div class="contact-left">
-
-<h1 class="sub-title">Contact Me</h1>
-
-<p><i class="fa-solid fa-paper-plane"></i> mona.mk.agrawal@gmail.com</p>
-
-<p><i class="fa-solid fa-phone"></i> 6386010846</p>
-
-
-<div class="social-icons">
-
-<a href="https://www.instagram.com/mona_agrawall/"><i class="fa-brands fa-square-instagram"></i></a>
-
-<a href="https://x.com/Mona_Agrawall"><i class="fa-brands fa-x-twitter"></i></a>
-
-<a href="https://www.linkedin.com/in/mona-agrawal-"><i class="fa-brands fa-linkedin"></i></a>
-
-<a href="https://github.com/Mona-Agrawall"><i class="fa-brands fa-square-github"></i></a>
-
-</div>
-
-<a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
-
-</div>
-
-
-
-<div class="contact-right">
-
-<form>
-
-<input type="text" name="Name" placeholder="Your Name" required>
-
-<input type="email" name="Email" placeholder="Your Email" required>
-
-<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-
-<button type="submit" class="btn btn2">Submit</button>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="copyright">
-
-<p>Copyright © Mona. Love <span>&#x2764;</span></p>
-
-</div>
-
-</div>
-
-
-
-<!-- JAVASCRIPT -->
-<script src="script.js"></script>
-
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="dock" aria-label="Primary" data-load="dock">
+    <a href="./" aria-current="page">Home</a>
+    <a href="projects.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="toolkit.html">Toolkit</a>
+  </nav>
+
+  <div class="shell">
+    <aside class="aside" aria-label="Profile">
+      <div class="card" data-load="card" style="--i:1">
+        <div class="card__photo">
+          <img src="assets/img/mona-portrait.webp" width="433" height="576" alt="Portrait of Mona Agrawal" fetchpriority="high">
+        </div>
+        <div>
+          <p class="card__name">Mona Agrawal</p>
+          <p class="card__role">AI engineer and full-stack developer. B.Tech CSE at SRMIST, Chennai.</p>
+        </div>
+        <div class="card__actions">
+          <a class="btn btn--solid" href="assets/docs/mona-agrawal-resume.pdf" download>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-download"></use></svg>Résumé
+          </a>
+          <a class="btn btn--line" href="mailto:mona.mk.agrawal@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg>Email
+          </a>
+        </div>
+        <div class="card__social">
+          <a href="https://github.com/Mona-Agrawall" aria-label="GitHub" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg></a>
+          <a href="https://www.linkedin.com/in/mona-agrawal-/" aria-label="LinkedIn" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-linkedin"></use></svg></a>
+          <a href="https://x.com/Mona_Agrawall" aria-label="X (Twitter)" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg></a>
+          <a href="https://www.instagram.com/mona_agrawall/" aria-label="Instagram" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-instagram"></use></svg></a>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <section class="section" aria-labelledby="intro-title">
+        <h1 class="display" id="intro-title">
+          <span class="sr-only">Mona Agrawal, </span>
+          <span data-line style="--i:0"><span>AI engineer</span></span>
+          <span data-line class="dim" style="--i:1"><span>&amp; full-stack developer</span></span>
+        </h1>
+        <p class="lead" data-load style="--i:3">
+          I build <strong>retrieval-augmented assistants</strong>, <strong>speech translation pipelines</strong> and the backends that keep them dependable, from FastAPI services to job queues. Currently studying Computer Science at SRM Institute of Science and Technology.
+        </p>
+
+        <ul class="stats" data-load style="--i:4">
+          <li class="stat"><span class="stat__value">Top 2%</span><span class="stat__label">of 260,000+ participants in the Adobe India Hackathon</span></li>
+          <li class="stat"><span class="stat__value">&lt;150ms</span><span class="stat__label">audio–video drift in my video translation pipeline</span></li>
+          <li class="stat"><span class="stat__value">78.6%</span><span class="stat__label">of weights a network learned to prune during training</span></li>
+        </ul>
+
+        <div class="focus" data-load style="--i:5">
+          <div class="focus__item">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-spark"></use></svg>
+            <p class="focus__title">Applied AI</p>
+            <p>RAG over private documents, Whisper-based speech pipelines and LLM features that stay grounded in real data.</p>
+          </div>
+          <div class="focus__item">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-layers"></use></svg>
+            <p class="focus__title">Backend &amp; full stack</p>
+            <p>FastAPI and Express services, Postgres and MongoDB, Redis-backed queues and the React front ends on top.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="work-title">
+        <h2 class="heading" id="work-title" data-reveal>
+          <span class="line">Selected</span>
+          <span class="line dim">work</span>
+        </h2>
+
+        <div class="rows">
+          <article class="row" data-reveal data-cursor="View">
+            <div class="row__media">
+              <img src="assets/img/cover-video-translation.svg" width="640" height="400" alt="" loading="lazy">
+            </div>
+            <div>
+              <h3 class="row__title"><a href="projects.html#video-translation">Multilingual Video Translation</a></h3>
+              <p class="row__desc">Whisper, translation and TTS, re-synced to the original footage with FFmpeg.</p>
+            </div>
+            <svg class="row__arrow" aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+          </article>
+
+          <article class="row" data-reveal data-cursor="View">
+            <div class="row__media">
+              <img src="assets/img/nazar-720.webp" width="720" height="450" alt="" loading="lazy">
+            </div>
+            <div>
+              <h3 class="row__title"><a href="projects.html#nazar">Nazar</a></h3>
+              <p class="row__desc">A market watchlist that ranks what changed while you were away.</p>
+            </div>
+            <svg class="row__arrow" aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+          </article>
+
+          <article class="row" data-reveal data-cursor="View">
+            <div class="row__media">
+              <img src="assets/img/chemical-rag-720.webp" width="720" height="450" alt="" loading="lazy">
+            </div>
+            <div>
+              <h3 class="row__title"><a href="projects.html#chemical-rag">Chemical Safety RAG Assistant</a></h3>
+              <p class="row__desc">Offline Q&amp;A over safety data sheets, with page-level citations.</p>
+            </div>
+            <svg class="row__arrow" aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+          </article>
+
+          <article class="row" data-reveal data-cursor="View">
+            <div class="row__media">
+              <img src="assets/img/mailflow-720.webp" width="720" height="450" alt="" loading="lazy">
+            </div>
+            <div>
+              <h3 class="row__title"><a href="projects.html#mailflow">MailFlow</a></h3>
+              <p class="row__desc">Email scheduling on BullMQ delayed jobs, with rate limits and crash recovery.</p>
+            </div>
+            <svg class="row__arrow" aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+          </article>
+        </div>
+
+        <p class="section__foot" data-reveal><a class="link" href="projects.html">See all seven projects</a></p>
+      </section>
+
+      <section class="section" aria-labelledby="exp-title">
+        <h2 class="heading" id="exp-title" data-reveal>
+          <span class="line">Experience</span>
+          <span class="line dim">&amp; education</span>
+        </h2>
+
+        <ol class="entries">
+          <li class="entry" data-reveal>
+            <h3 class="entry__title">Placfv’s SRM</h3>
+            <p class="entry__role">Research &amp; Development Member</p>
+            <p class="entry__when">Jan 2025 – Present</p>
+            <p class="entry__body">Exploratory data analysis on 50+ employer datasets with Python (Pandas) and SQL to identify hiring patterns and improve placement engagement by 35%.</p>
+          </li>
+          <li class="entry" data-reveal>
+            <h3 class="entry__title">Coding Ninjas SRM</h3>
+            <p class="entry__role">Corporate Member</p>
+            <p class="entry__when">Sept 2024 – Present</p>
+            <p class="entry__body">Organised hackathons on Devfolio for 300+ participants.</p>
+          </li>
+          <li class="entry" data-reveal>
+            <h3 class="entry__title">SRM Institute of Science and Technology</h3>
+            <p class="entry__role">B.Tech, Computer Science and Engineering</p>
+            <p class="entry__when">Aug 2023 – May 2027</p>
+            <p class="entry__body">Chennai, Tamil Nadu.</p>
+          </li>
+        </ol>
+
+        <p class="section__foot" data-reveal><a class="link" href="about.html">More about me</a></p>
+      </section>
+
+      <section class="section" aria-labelledby="tools-title">
+        <h2 class="heading" id="tools-title" data-reveal>
+          <span class="line">Tools I</span>
+          <span class="line dim">reach for</span>
+        </h2>
+
+        <ul class="tools">
+          <li class="tool" data-reveal><span class="tool__mark" aria-hidden="true">Py</span><div><p class="tool__name">Python</p><p class="tool__use">ML pipelines, RAG systems and APIs</p></div></li>
+          <li class="tool" data-reveal><span class="tool__mark" aria-hidden="true">C++</span><div><p class="tool__name">C++</p><p class="tool__use">Data structures and algorithms</p></div></li>
+          <li class="tool" data-reveal><span class="tool__mark" aria-hidden="true">Lc</span><div><p class="tool__name">LangChain + FAISS</p><p class="tool__use">Retrieval and vector search</p></div></li>
+          <li class="tool" data-reveal><span class="tool__mark" aria-hidden="true">Wh</span><div><p class="tool__name">Whisper</p><p class="tool__use">Speech-to-text for translation</p></div></li>
+          <li class="tool" data-reveal><span class="tool__mark" aria-hidden="true">Fa</span><div><p class="tool__name">FastAPI</p><p class="tool__use">Python services and REST APIs</p></div></li>
+          <li class="tool" data-reveal><span class="tool__mark" aria-hidden="true">Re</span><div><p class="tool__name">React</p><p class="tool__use">Front ends for my backends</p></div></li>
+        </ul>
+
+        <p class="section__foot" data-reveal><a class="link" href="toolkit.html">The full toolkit</a></p>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 class="heading" id="contact-title" data-reveal>
+          <span class="line">Let’s build</span>
+          <span class="line dim">something useful</span>
+        </h2>
+        <p class="section__intro" data-reveal>A project, a role, or a question about something I’ve built: email is the quickest way to reach me.</p>
+
+        <div class="contact__mail" data-reveal>
+          <a class="mailto link" href="mailto:mona.mk.agrawal@gmail.com">mona.mk.agrawal@gmail.com</a>
+          <button class="copy" type="button" data-copy="mona.mk.agrawal@gmail.com" hidden>
+            <svg class="icon i-idle" aria-hidden="true"><use href="assets/icons.svg#i-copy"></use></svg>
+            <svg class="icon i-done" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+            <span data-copy-label>Copy</span>
+          </button>
+        </div>
+
+        <ul class="socials" data-reveal>
+          <li><a class="link" href="https://github.com/Mona-Agrawall" rel="me noopener" target="_blank">GitHub</a></li>
+          <li><a class="link" href="https://www.linkedin.com/in/mona-agrawal-/" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a class="link" href="https://x.com/Mona_Agrawall" rel="me noopener" target="_blank">X</a></li>
+          <li><a class="link" href="https://www.instagram.com/mona_agrawall/" rel="me noopener" target="_blank">Instagram</a></li>
+          <li><a class="link" href="assets/docs/mona-agrawal-resume.pdf" download>Résumé (PDF)</a></li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>© <span data-year>2026</span> Mona Agrawal</p>
+        <div class="footer__meta">
+          <p>Chennai<span data-clock hidden>, <time></time> IST</span></p>
+          <a class="link link--quiet" href="#main">Back to top</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <div class="cursor" aria-hidden="true"></div>
 </body>
 </html>

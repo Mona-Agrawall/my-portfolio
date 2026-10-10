@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Mona Agrawal</title>
+  <meta name="description" content="Projects by Mona Agrawal: multilingual video translation, an offline RAG assistant, a market watchlist, an email scheduler and more.">
+  <link rel="canonical" href="https://monaaportfolio.netlify.app/projects.html">
+  <meta name="theme-color" content="#121110">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mona Agrawal">
+  <meta property="og:title" content="Projects — Mona Agrawal">
+  <meta property="og:description" content="AI pipelines, RAG systems and full-stack builds, with the numbers behind them.">
+  <meta property="og:url" content="https://monaaportfolio.netlify.app/projects.html">
+  <meta property="og:image" content="https://monaaportfolio.netlify.app/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mona Agrawal — AI engineer and full-stack developer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — Mona Agrawal">
+  <meta name="twitter:description" content="AI pipelines, RAG systems and full-stack builds, with the numbers behind them.">
+  <meta name="twitter:image" content="https://monaaportfolio.netlify.app/assets/img/og.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");setTimeout(function(){var r=document.documentElement;r.classList.add("is-ready");if(!window.monaMain)r.classList.remove("js")},2500);</script>
+  <script src="vendor/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="dock" aria-label="Primary" data-load="dock">
+    <a href="./">Home</a>
+    <a href="projects.html" aria-current="page">Work</a>
+    <a href="about.html">About</a>
+    <a href="toolkit.html">Toolkit</a>
+  </nav>
+
+  <div class="shell">
+    <aside class="aside" aria-label="Profile">
+      <div class="card" data-load="card" style="--i:1">
+        <div class="card__photo">
+          <img src="assets/img/mona-portrait.webp" width="433" height="576" alt="Portrait of Mona Agrawal">
+        </div>
+        <div>
+          <p class="card__name">Mona Agrawal</p>
+          <p class="card__role">AI engineer and full-stack developer. B.Tech CSE at SRMIST, Chennai.</p>
+        </div>
+        <div class="card__actions">
+          <a class="btn btn--solid" href="assets/docs/mona-agrawal-resume.pdf" download>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-download"></use></svg>Résumé
+          </a>
+          <a class="btn btn--line" href="mailto:mona.mk.agrawal@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg>Email
+          </a>
+        </div>
+        <div class="card__social">
+          <a href="https://github.com/Mona-Agrawall" aria-label="GitHub" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg></a>
+          <a href="https://www.linkedin.com/in/mona-agrawal-/" aria-label="LinkedIn" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-linkedin"></use></svg></a>
+          <a href="https://x.com/Mona_Agrawall" aria-label="X (Twitter)" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg></a>
+          <a href="https://www.instagram.com/mona_agrawall/" aria-label="Instagram" rel="me noopener" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-instagram"></use></svg></a>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <section class="section" aria-labelledby="page-title">
+        <h1 class="display" id="page-title">
+          <span data-line style="--i:0"><span>Projects</span></span>
+          <span data-line class="dim" style="--i:1"><span>&amp; experiments</span></span>
+        </h1>
+        <p class="lead" data-load style="--i:3">Seven builds, from speech pipelines and retrieval systems to queues and browser extensions. Each one lists its stack, what it achieved and where the code lives.</p>
+
+        <div class="projects">
+          <article class="project" id="video-translation" data-reveal>
+            <div class="media">
+              <img src="assets/img/cover-video-translation.svg" width="640" height="400" alt="Illustration: a source waveform translated into a new, re-timed waveform" loading="lazy">
+            </div>
+            <div>
+              <div class="project__head">
+                <h2 class="project__title">Multilingual Video Translation System</h2>
+                <p class="project__context">AI video localisation</p>
+              </div>
+              <p class="project__summary">An end-to-end pipeline that takes a video, transcribes its speech with Whisper, translates the transcript, synthesises new speech and lays it back over the original footage. A Streamlit interface handles upload and download.</p>
+              <dl class="project__facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Python, Whisper, FFmpeg, Streamlit, gTTS</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    <ul class="project__outcomes">
+                      <li>14% word error rate and 0.65 BLEU; a one-minute video processes in about 45 seconds on a local CPU.</li>
+                      <li>FFmpeg time-stretching keeps translated audio within 150 ms of the original timing.</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="project__links">
+                <a class="btn btn--ghost" href="https://github.com/Mona-Agrawall/multilingual-video-translation-system" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg>Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="nazar" data-reveal>
+            <div class="media">
+              <img src="assets/img/nazar-1280.webp" srcset="assets/img/nazar-720.webp 720w, assets/img/nazar-1280.webp 1280w" sizes="(min-width: 1024px) 760px, 100vw" width="1280" height="800" alt="Nazar dashboard: a morning briefing listing three stocks that changed meaningfully, led by an attention score of 98" loading="lazy">
+            </div>
+            <div>
+              <div class="project__head">
+                <h2 class="project__title">Nazar</h2>
+                <p class="project__context">Code, by Groww 2026 submission</p>
+              </div>
+              <p class="project__summary">A market watchlist built around one question: what changed while I was away, and does it matter? A deterministic engine scores every watched stock from 0 to 100 on volume, volatility, breakouts, reversals and the move since your last visit. Gemini only turns those pre-computed facts into a one-line explanation.</p>
+              <dl class="project__facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>React 19, TypeScript, Vite, Tailwind CSS, Express, Supabase (Postgres, Auth), Google Gemini</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    <ul class="project__outcomes">
+                      <li>Per-user price snapshots measure change since your last visit, not just since yesterday’s close.</li>
+                      <li>Row-level security on every watchlist query, and deterministic fallback text when the LLM is unavailable.</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="project__links">
+                <a class="btn btn--ghost" href="https://groww-pulse-iota.vercel.app/" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>Live site
+                </a>
+                <a class="btn btn--ghost" href="https://github.com/Mona-Agrawall/nazar" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg>Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="chemical-rag" data-reveal>
+            <div class="media">
+              <img src="assets/img/chemical-rag-1280.webp" srcset="assets/img/chemical-rag-720.webp 720w, assets/img/chemical-rag-1280.webp 1280w" sizes="(min-width: 1024px) 760px, 100vw" width="1280" height="800" alt="Chemical Safety Assistant interface: an uploaded safety data sheet and an answer to the question “What is ethanol?”" loading="lazy">
+            </div>
+            <div>
+              <div class="project__head">
+                <h2 class="project__title">Chemical Safety RAG Assistant</h2>
+                <p class="project__context">Offline retrieval-augmented generation</p>
+              </div>
+              <p class="project__summary">Ask plain-language questions about hazards, storage, PPE and first aid, answered from the Chemical Safety Data Sheets you upload. Everything runs locally, with no API keys.</p>
+              <dl class="project__facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Python, LangChain, FAISS, MiniLM embeddings, Mistral via Ollama, Streamlit</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    <ul class="project__outcomes">
+                      <li>Every answer cites the source PDF and page number.</li>
+                      <li>Conversational memory carries context across follow-up questions.</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="project__links">
+                <a class="btn btn--ghost" href="https://github.com/Mona-Agrawall/chemical-safety-rag-assistant" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg>Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="mailflow" data-reveal>
+            <div class="media">
+              <img src="assets/img/mailflow-1280.webp" srcset="assets/img/mailflow-720.webp 720w, assets/img/mailflow-1280.webp 1280w" sizes="(min-width: 1024px) 760px, 100vw" width="1280" height="800" alt="MailFlow dashboard listing scheduled emails with send times" loading="lazy">
+            </div>
+            <div>
+              <div class="project__head">
+                <h2 class="project__title">MailFlow</h2>
+                <p class="project__context">ReachInbox engineering assignment</p>
+              </div>
+              <p class="project__summary">An email scheduler and dashboard. Emails are scheduled through an API, stored in PostgreSQL and sent as delayed BullMQ jobs with no cron, under Redis-backed hourly rate limits. Elasticsearch handles full-text search.</p>
+              <dl class="project__facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>TypeScript, Express, PostgreSQL, Redis, BullMQ, Elasticsearch, React, Tailwind CSS</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    <ul class="project__outcomes">
+                      <li>A reconcile watchdog re-enqueues jobs stranded by worker or API crashes, without duplicate sends.</li>
+                      <li>A Slack alert fires when a sender hits its hourly limit, at most once per hour.</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="project__links">
+                <a class="btn btn--ghost" href="https://github.com/Mona-Agrawall/mailflow-email-scheduler" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg>Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="adaptive-engine" data-reveal>
+            <div class="media">
+              <img src="assets/img/cover-adaptive-engine.svg" width="640" height="400" alt="Illustration: item response curves with the learner’s estimated ability marked" loading="lazy">
+            </div>
+            <div>
+              <div class="project__head">
+                <h2 class="project__title">Adaptive Diagnostic Engine</h2>
+                <p class="project__context">Adaptive testing backend</p>
+              </div>
+              <p class="project__summary">A GRE diagnostic that adapts as you answer. After each response it updates an ability estimate inspired by Item Response Theory and picks the next question to match. At the end, an LLM turns the session into a personalised study plan.</p>
+              <dl class="project__facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Python, FastAPI, MongoDB Atlas, Groq API (LLaMA 3.3 70B)</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    <ul class="project__outcomes">
+                      <li>REST APIs for test sessions, adaptive question selection and answer evaluation.</li>
+                      <li>A three-step study plan aimed at each learner’s weak spots.</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="project__links">
+                <a class="btn btn--ghost" href="https://github.com/Mona-Agrawall/adaptive-diagnostic-engine" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg>Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="self-pruning" data-reveal>
+            <div class="media">
+              <img src="assets/img/cover-self-pruning.svg" width="640" height="400" alt="Illustration: a grid of connections where most have been pruned away" loading="lazy">
+            </div>
+            <div>
+              <div class="project__head">
+                <h2 class="project__title">Self-Pruning Neural Network</h2>
+                <p class="project__context">Deep learning experiment</p>
+              </div>
+              <p class="project__summary">A network that removes its own weights while it trains. Each weight gets a learnable sigmoid gate, and an L1-style sparsity penalty pushes most gates towards zero. Trained and evaluated on CIFAR-10 at four sparsity strengths.</p>
+              <dl class="project__facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Python, PyTorch, torchvision, NumPy, Matplotlib</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    <ul class="project__outcomes">
+                      <li>At λ = 1.0, 78.6% of gates pruned with 61.78% test accuracy.</li>
+                      <li>Accuracy held between 61.0% and 61.8% as sparsity rose from 46.7% to 78.6%.</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="project__links">
+                <a class="btn btn--ghost" href="https://github.com/Mona-Agrawall/self-pruning-neural-network" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg>Source code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="deadline-os" data-reveal>
+            <div class="media">
+              <img src="assets/img/cover-deadline-os.svg" width="640" height="400" alt="Illustration: a month calendar with detected deadlines marked" loading="lazy">
+            </div>
+            <div>
+              <div class="project__head">
+                <h2 class="project__title">Deadline OS</h2>
+                <p class="project__context">Chrome extension</p>
+              </div>
+              <p class="project__summary">A Chrome extension that reads your Gmail for deadlines (interviews, assignments, fee payments, applications) and keeps them in one place. A rule-based parser extracts dates and a confidence score decides what to save automatically.</p>
+              <dl class="project__facts">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>JavaScript, Chrome Extensions (Manifest V3), Gmail API, Google Calendar API</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    <ul class="project__outcomes">
+                      <li>Understands formats such as “April 5”, “05/04/2026”, “in 3 days” and “next Friday”.</li>
+                      <li>High-confidence deadlines sync to Google Calendar, with reminders 1 hour and 15 minutes ahead.</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="project__links">
+                <a class="btn btn--ghost" href="https://github.com/Mona-Agrawall/deadline-os" target="_blank" rel="noopener">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github"></use></svg>Source code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="section__foot" data-reveal>More experiments live on <a class="link" href="https://github.com/Mona-Agrawall" target="_blank" rel="noopener">GitHub</a>.</p>
+      </section>
+
+      <footer class="footer">
+        <p>© <span data-year>2026</span> Mona Agrawal</p>
+        <div class="footer__meta">
+          <p>Chennai<span data-clock hidden>, <time></time> IST</span></p>
+          <a class="link link--quiet" href="#main">Back to top</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

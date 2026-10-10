@@ -7,6 +7,10 @@
 
 <title>Mona Agrawal | Portfolio</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="images/logo.png">
 
@@ -43,12 +47,14 @@
 </nav>
 
 
-<div class="header-text fade-in">
+<div class="header-text animate-on-load">
 
-<p>AI Engineer | LLM Applications | RAG Systems</p>
+<div class="typing-container-wrapper">
+    <p class="typing-container"><span id="typing-text"></span><span class="cursor">|</span></p>
+</div>
 
-<h1>
-Hi, I am <span>Mona</span><br>
+<h1 class="hero-title">
+Hi, I am <span class="gradient-text">Mona</span><br>
 Agrawal From India
 </h1>
 
@@ -436,45 +442,7 @@ FastAPI and MongoDB to manage test sessions and generate personalized study plan
 
 
 <!-- JAVASCRIPT -->
-
-<script>
-
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(event,tabname){
-
-for(tablink of tablinks){
-tablink.classList.remove("active-link");
-}
-
-for(tabcontent of tabcontents){
-tabcontent.classList.remove("active-tab");
-}
-
-event.currentTarget.classList.add("active-link");
-
-document.getElementById(tabname).classList.add("active-tab");
-
-}
-
-</script>
-
-
-<script>
-
-var sidemenu = document.getElementById("sidemenu");
-
-function openmenu(){
-sidemenu.style.right = "0";
-}
-
-function closemenu(){
-sidemenu.style.right = "-200px";
-}
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
 </html>

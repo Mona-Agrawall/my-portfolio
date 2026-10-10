@@ -475,19 +475,29 @@ main {
   border-color: var(--stone);
 }
 
-/* Underline wipe: draws in from the left on hover */
+/* Underline wipe: a quiet resting line, drawn over in full colour on hover */
 .link {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 0% 1px;
-  background-position: 0 100%;
+  background-image: linear-gradient(currentColor, currentColor), linear-gradient(var(--hairline), var(--hairline));
+  background-size: 0% 1px, 100% 1px;
+  background-position: 0 100%, 0 100%;
   background-repeat: no-repeat;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   transition: background-size var(--dur) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
 
 .link:hover,
 .link:focus-visible {
-  background-size: 100% 1px;
+  background-size: 100% 1px, 100% 1px;
+}
+
+.mailto.link,
+.footer .link {
+  background-size: 0% 1px, 0% 1px;
+}
+
+.mailto.link:hover,
+.footer .link:hover {
+  background-size: 100% 1px, 0% 1px;
 }
 
 .link--quiet {
@@ -898,11 +908,6 @@ main {
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1;
-  transition: transform var(--dur) var(--ease-out);
-}
-
-.tool:hover .tool__mark {
-  transform: rotate(-4deg) scale(1.04);
 }
 
 .tool__name {

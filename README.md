@@ -8,59 +8,35 @@ Personal portfolio website for Mona Agrawal, a Computer Science student speciali
 
 ## Overview
 
-A responsive, single-page portfolio presenting technical skills, AI projects, achievements, and contact information. Built with vanilla HTML, CSS, and JavaScript — no frameworks or build tools required.
-
----
-
-## Sections
-
-| Section      | Description                                                              |
-|--------------|--------------------------------------------------------------------------|
-| Home         | Introduction and professional title                                      |
-| About        | Background, interests, and technical focus                               |
-| Skills       | Languages, AI/ML tools, frameworks, databases, and developer tools       |
-| Projects     | Featured AI engineering projects                                         |
-| Achievements | Hackathons and recognised programs                                       |
-| Contact      | Email, phone, and social profiles                                        |
-
-### Featured Projects
-
-**Multilingual Video Translation System**
-An AI pipeline that translates spoken video content into target languages using Whisper for transcription and FFmpeg for audio-video processing.
-
-**Chemical Safety RAG Assistant**
-A Retrieval-Augmented Generation system enabling natural language queries over chemical safety documentation.
-
-**Adaptive Diagnostic Engine**
-An adaptive testing backend using item response theory for ability estimation and LLM-generated personalised study plans.
+A multi-page portfolio (Home, Projects, About, Toolkit) presenting AI and full-stack projects, experience, education and recognition. Built with plain HTML, CSS and JavaScript: no framework and no build step.
 
 ---
 
 ## Tech Stack
 
-- **Structure:** HTML5
-- **Styling:** CSS3 — Grid, Flexbox, custom animations
-- **Behaviour:** JavaScript (vanilla)
-- **Icons:** Font Awesome
+- **Structure:** semantic HTML5, one stylesheet, one script
+- **Type:** Bricolage Grotesque + Geist, self-hosted variable WOFF2
+- **Motion:** CSS transitions, IntersectionObserver reveals, [Lenis](https://github.com/darkroomengineering/lenis) smooth scrolling (self-hosted), cross-document View Transitions
+- **Icons:** SVG sprite (Simple Icons, CC0, for brand marks)
 
 ---
 
 ## Project Structure
 
 ```
-my-portfolio/
-├── images/
-│   ├── background.png
-│   ├── phone-background.png
-│   ├── mona1.jpg
-│   ├── work-1.png
-│   ├── work-2.png
-│   ├── work-3.png
-│   └── certificates/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+├── index.html          Home
+├── projects.html       All projects
+├── about.html          About, experience, education, recognition
+├── toolkit.html        Tools and where they are used
+├── 404.html
+├── css/style.css
+├── js/main.js
+├── vendor/lenis.min.js
+├── assets/
+│   ├── fonts/  img/  docs/
+│   ├── icons.svg
+│   └── favicon.svg
+└── legacy/             Previous version of the site
 ```
 
 ---
@@ -70,27 +46,10 @@ my-portfolio/
 ```bash
 git clone https://github.com/Mona-Agrawall/my-portfolio.git
 cd my-portfolio
+python -m http.server 5173   # then open http://localhost:5173
 ```
 
-Open `index.html` directly in a browser. No dependencies to install.
-
----
-
-## Customisation
-
-1. Edit personal details and copy in `index.html`
-2. Replace images in the `images/` directory
-3. Update project descriptions, links, and social media URLs
-
----
-
-## Planned Improvements
-
-- Deploy via GitHub Pages
-- Add live demo links for projects
-- Integrate GitHub contribution graph
-- Add scroll-triggered animations
-- Improve keyboard accessibility and ARIA labels
+Any static file server works. Opening `index.html` directly also works, apart from the SVG icon sprite, which some browsers block on `file://`.
 
 ---
 

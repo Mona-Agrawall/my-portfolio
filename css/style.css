@@ -934,12 +934,13 @@ main {
   height: 3.5rem;
   border-radius: 12px;
   background: var(--bone);
-  color: var(--ink);
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1;
+}
+
+/* Logos share one optical box so wide and tall marks read the same size */
+.tool__mark img {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
 }
 
 .tool__name {

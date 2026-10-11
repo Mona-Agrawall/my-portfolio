@@ -242,11 +242,53 @@
 
       <section class="section" id="contact" aria-labelledby="contact-title">
         <h2 class="heading" id="contact-title" data-reveal>
-          <span class="line">Let’s build</span>
-          <span class="line dim">something useful</span>
+          <span class="line">Let’s work</span>
+          <span class="line dim">together</span>
         </h2>
-        <p class="section__intro" data-reveal>A project, a role, or a question about something I’ve built: email is the quickest way to reach me.</p>
+        <p class="section__intro" data-reveal>A project, a role, or a question about something I’ve built: send a message here, or email me directly.</p>
 
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-contact data-reveal>
+          <input type="hidden" name="form-name" value="contact">
+          <p class="contact-form__trap" hidden>
+            <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="field">
+            <label class="field__label" for="cf-name">Name</label>
+            <input class="field__input" id="cf-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="cf-name-error">
+            <p class="field__error" id="cf-name-error"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="cf-email">Email</label>
+            <input class="field__input" id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="cf-email-error">
+            <p class="field__error" id="cf-email-error"></p>
+          </div>
+
+          <div class="field field--wide">
+            <label class="field__label" for="cf-message">Message</label>
+            <textarea class="field__input" id="cf-message" name="message" rows="6" minlength="10" maxlength="5000" required aria-describedby="cf-message-error"></textarea>
+            <p class="field__error" id="cf-message-error"></p>
+          </div>
+
+          <div class="field--wide">
+            <button class="btn btn--accent btn--block" type="submit" data-submit>
+              <span data-submit-label>Send message</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </button>
+            <p class="contact-form__status" role="status" aria-live="polite" data-form-status></p>
+          </div>
+        </form>
+
+        <div class="contact-success" tabindex="-1" data-form-success hidden>
+          <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+          <div>
+            <p class="contact-success__title">Thanks, your message has been sent.</p>
+            <p>I’ll reply to the email address you entered.</p>
+          </div>
+        </div>
+
+        <p class="contact__or" data-reveal>Prefer email?</p>
         <div class="contact__mail" data-reveal>
           <a class="mailto link" href="mailto:mona.mk.agrawal@gmail.com">mona.mk.agrawal@gmail.com</a>
           <button class="copy" type="button" data-copy="mona.mk.agrawal@gmail.com" hidden>

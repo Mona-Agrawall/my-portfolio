@@ -100,6 +100,91 @@
     label.setAttribute("aria-live", "polite");
   });
 
+  /* ---- Contact form: Netlify Forms, submitted with fetch so the page stays put.
+     Without JS the form still posts natively and uses browser validation. ---- */
+  var form = document.querySelector("[data-contact]");
+  if (form) {
+    var messages = {
+      name: { valueMissing: "Please enter your name." },
+      email: {
+        valueMissing: "Please enter your email address.",
+        typeMismatch: "That email address doesn’t look right."
+      },
+      message: {
+        valueMissing: "Please write a message.",
+        tooShort: "A little more detail, please (10 characters or more)."
+      }
+    };
+    var fields = Array.prototype.slice.call(form.querySelectorAll(".field__input"));
+    var submit = form.querySelector("[data-submit]");
+    var submitLabel = form.querySelector("[data-submit-label]");
+    var status = form.querySelector("[data-form-status]");
+    var success = document.querySelector("[data-form-success]");
+
+    form.noValidate = true;
+
+    // Checked by hand: whitespace-only input should fail, and validity.tooShort
+    // only reports after user edits in some browsers.
+    var check = function (input) {
+      var set = messages[input.name];
+      var value = input.value.trim();
+      var text = "";
+      if (!value) {
+        text = set.valueMissing;
+      } else if (input.validity.typeMismatch) {
+        text = set.typeMismatch;
+      } else if (value.length < input.minLength) {
+        text = set.tooShort;
+      }
+      document.getElementById(input.getAttribute("aria-describedby")).textContent = text;
+      if (text) {
+        input.setAttribute("aria-invalid", "true");
+      } else {
+        input.removeAttribute("aria-invalid");
+      }
+      return !text;
+    };
+
+    fields.forEach(function (input) {
+      input.addEventListener("blur", function () {
+        if (input.value) check(input);
+      });
+      input.addEventListener("input", function () {
+        if (input.hasAttribute("aria-invalid")) check(input);
+      });
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var invalid = fields.filter(function (input) { return !check(input); });
+      if (invalid.length) {
+        invalid[0].focus();
+        return;
+      }
+
+      submit.disabled = true;
+      submitLabel.textContent = "Sending…";
+      status.textContent = "";
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (response) {
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        form.reset();
+        form.hidden = true;
+        success.hidden = false;
+        success.focus();
+      }).catch(function () {
+        status.textContent = "Sorry, your message didn’t send. Please email me at mona.mk.agrawal@gmail.com instead.";
+      }).then(function () {
+        submit.disabled = false;
+        submitLabel.textContent = "Send message";
+      });
+    });
+  }
+
   /* ---- Cursor label over project rows (fine pointers only) ---- */
   var cursor = document.querySelector(".cursor");
   var targets = document.querySelectorAll("[data-cursor]");

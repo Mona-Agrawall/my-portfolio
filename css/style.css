@@ -988,62 +988,134 @@ main {
 
 .projects {
   display: grid;
-  gap: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+  gap: clamp(1.25rem, 0.9rem + 1.2vw, 2rem);
   margin-top: clamp(3rem, 2rem + 4vw, 5rem);
 }
 
-.project {
+/* The article carries the scroll reveal; the inner card carries hover state,
+   so the two transforms never fight. */
+.project__card {
+  position: relative;
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  padding: clamp(1rem, 0.6rem + 1.2vw, 1.5rem);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-l);
+  transition: background-color 250ms var(--ease-out), border-color 250ms var(--ease-out),
+    box-shadow 250ms var(--ease-out), transform 250ms var(--ease-out);
+}
+
+/* Glass state: on hover, on keyboard focus inside the card, and always on touch screens */
+.project__card:hover,
+.project__card:focus-within {
+  background: rgb(243 239 232 / 0.045);
+  border-color: rgb(243 239 232 / 0.14);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 1px 0 rgb(243 239 232 / 0.06) inset, 0 24px 48px -28px rgb(0 0 0 / 0.7);
+}
+
+@media (hover: none) {
+  .project__card {
+    background: rgb(243 239 232 / 0.035);
+    border-color: rgb(243 239 232 / 0.1);
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project__card:hover,
+  .project__card:focus-within {
+    transform: translateY(-4px);
+  }
 }
 
 .project .media {
   border-radius: var(--radius-m);
 }
 
-.project:hover .media img {
+.project__card:hover .media img {
   transform: scale(1.03);
 }
 
 .project__head {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 0.25rem 1.5rem;
+  gap: 1rem;
 }
 
 .project__title {
   font-family: var(--font-display);
-  font-size: clamp(1.625rem, 1.3rem + 1.3vw, 2.25rem);
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
 
 .project__context {
+  margin-top: 0.35rem;
   color: var(--stone);
   font-size: var(--fs-small);
 }
 
+/* Corner link: the accent arrow, with a full-size tap target */
+.project__open {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: -0.5rem -0.5rem 0 0;
+  border-radius: 50%;
+  color: var(--rose);
+  transition: background-color 250ms var(--ease-out);
+}
+
+.project__open .icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  transition: transform 250ms var(--ease-out);
+}
+
+.project__open:hover,
+.project__open:focus-visible {
+  background: rgb(255 92 122 / 0.12);
+}
+
+.project__open:focus-visible {
+  outline-offset: 0;
+  border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project__open:hover .icon,
+  .project__open:focus-visible .icon {
+    transform: translate(2px, -2px);
+  }
+}
+
 .project__summary {
   max-width: 40rem;
-  margin-top: 0.85rem;
   color: var(--stone);
   line-height: 1.65;
 }
 
 .project__facts {
   display: grid;
-  gap: 1rem 2rem;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  gap: 1rem;
+  padding-top: 1.25rem;
   border-top: 1px solid var(--hairline);
 }
 
-@media (min-width: 640px) {
-  .project__facts {
-    grid-template-columns: 1fr 1.6fr;
+.project__facts > div {
+  display: grid;
+  gap: 0.4rem 1.5rem;
+}
+
+@media (min-width: 560px) {
+  .project__facts > div {
+    grid-template-columns: 5rem minmax(0, 1fr);
+    align-items: baseline;
   }
 }
 
@@ -1053,7 +1125,6 @@ main {
 }
 
 .project__facts dd {
-  margin-top: 0.3rem;
   font-size: var(--fs-small);
   line-height: 1.6;
 }
@@ -1062,16 +1133,26 @@ main {
   margin-top: 0.4rem;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tags li {
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  color: var(--bone);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
 .project__links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1.5rem;
-}
-
-.project__links .icon {
-  width: 1rem;
-  height: 1rem;
 }
 
 /* --------------------------------------------------------------------------

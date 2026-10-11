@@ -34,7 +34,7 @@ A multi-page portfolio (Home, Projects, About, Toolkit) presenting AI and full-s
 ├── vendor/lenis.min.js
 ├── assets/
 │   ├── fonts/  img/  docs/
-│   ├── icons.svg
+│   ├── icons/          Technology logos (Simple Icons, Devicon)
 │   └── favicon.svg
 └── legacy/             Previous version of the site
 ```

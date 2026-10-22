@@ -17,7 +17,7 @@ A multi-page portfolio (Home, Projects, About, Toolkit) presenting AI and full-s
 - **Structure:** semantic HTML5, one stylesheet, one script
 - **Type:** Bricolage Grotesque + Geist, self-hosted variable WOFF2
 - **Motion:** CSS transitions, IntersectionObserver reveals, [Lenis](https://github.com/darkroomengineering/lenis) smooth scrolling (self-hosted), cross-document View Transitions
-- **Icons:** SVG sprite (Simple Icons, CC0, for brand marks)
+- **Icons:** inline SVG sprite for UI icons; technology logos from Simple Icons (CC0) and Devicon (MIT)
 
 ---
 
@@ -36,7 +36,7 @@ A multi-page portfolio (Home, Projects, About, Toolkit) presenting AI and full-s
 │   ├── fonts/  img/  docs/
 │   ├── icons/          Technology logos (Simple Icons, Devicon)
 │   └── favicon.svg
-└── legacy/             Previous version of the site
+└── LICENSE
 ```
 
 ---
@@ -49,7 +49,13 @@ cd my-portfolio
 python -m http.server 5173   # then open http://localhost:5173
 ```
 
-Any static file server works. Opening `index.html` directly also works, apart from the SVG icon sprite, which some browsers block on `file://`.
+Any static file server works. Opening `index.html` directly also works, but the self-hosted fonts only load when served.
+
+---
+
+## Deployment
+
+Hosted on Netlify with no build command; the publish directory is the repository root. The contact form on Home uses Netlify Forms, so form detection must be enabled under Site configuration → Forms.
 
 ---
 
